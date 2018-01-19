@@ -1,5 +1,7 @@
 FROM debian:buster
 
+RUN apt update
+RUN apt install wget 
 RUN dpkg --add-architecture i386
 RUN wget -nc https://dl.winehq.org/wine-builds/Release.key
 RUN apt-key add Release.key
