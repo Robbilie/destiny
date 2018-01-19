@@ -14,4 +14,4 @@ RUN mkdir -p /usr/app
 WORKDIR /usr/app
 COPY . /usr/app
 
-CMD [ "wine ~/.wine/drive_c/Python27/python.exe eve_downloader.py && cp bin/python27.dll ~/.wine/drive_c/Python27/ && mv destiny_wrapper.py bin && cd bin && wine ~/.wine/drive_c/Python27/python.exe destiny_wrapper.py" ]
+CMD [ "/bin/bash -c 'wine ~/.wine/drive_c/Python27/python.exe eve_downloader.py && cp bin/python27.dll ~/.wine/drive_c/Python27/ && mv destiny_wrapper.py bin && cd bin && wine ~/.wine/drive_c/Python27/python.exe destiny_wrapper.py'" ]
