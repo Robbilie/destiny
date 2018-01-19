@@ -1,5 +1,5 @@
-import _destiny
 import blue
+import _destiny
 
 bp = blue.classes.CreateInstance('destiny.Ballpark')
 
