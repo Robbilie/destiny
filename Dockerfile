@@ -1,6 +1,6 @@
 FROM debian:buster
 
-RUN apt-get update && apt-get -y -q install wget
+RUN apt-get update && apt-get -y -q install wget gnupg
 RUN dpkg --add-architecture i386
 RUN wget -nc https://dl.winehq.org/wine-builds/Release.key
 RUN apt-key add Release.key
