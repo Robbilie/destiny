@@ -1,12 +1,10 @@
 FROM debian:buster
 
-RUN apt update
-RUN apt install wget 
+RUN apt update && apt install wget -y
 RUN dpkg --add-architecture i386
 RUN wget -nc https://dl.winehq.org/wine-builds/Release.key
 RUN apt-key add Release.key
-RUN apt update
-RUN apt install --install-recommends winehq-stable
+RUN apt update && apt install --install-recommends winehq-stable -y
 
 RUN wget https://www.python.org/ftp/python/2.7.14/python-2.7.14.msi
 RUN msiexec /a python-2.7.14.msi /qb TARGETDIR=C:\Python27
